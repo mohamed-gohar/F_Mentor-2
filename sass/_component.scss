@@ -1,0 +1,102 @@
+// mode toggel button
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @media (min-width: $md-min) {
+    width: auto;
+  }
+  & * {
+    cursor: pointer;
+  }
+  &:hover {
+    label {
+      color: var(--color-Text);
+    }
+    button {
+      background: linear-gradient(
+        to right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%)
+      );
+    }
+  }
+  &__label {
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-blue-Text);
+    @media (min-width: $md-min) {
+      margin-right: 1.6rem;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 4.8rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 10rem;
+    background: var(--color-toggle);
+    position: relative;
+    transition: none;
+    &__inner {
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: var(--color-bg);
+      transition: right 0.25s ease-in-out;
+    }
+  }
+  .active {
+    span {
+      right: calc(4.8rem - (1.8rem + 3px));
+    }
+  }
+}
+
+//cards
+.bottom,
+.today__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 3rem;
+  .card {
+    background: var(--color-Card-bg);
+    padding: 3.2rem;
+    border-radius: 0.6rem;
+    &:hover {
+      background: var(--color-hover);
+      cursor: pointer;
+    }
+    &__growth {
+      font-size: 1.2rem;
+      font-weight: 700;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: -2.3px;
+        left: -1.5rem;
+      }
+      &--up {
+        color: var(--color-lime-green);
+        &::before {
+          content: url(../images/icon-up.svg);
+        }
+      }
+      &--down {
+        color: var(--color-bright-red);
+        &::before {
+          content: url(../images/icon-down.svg);
+        }
+      }
+    }
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

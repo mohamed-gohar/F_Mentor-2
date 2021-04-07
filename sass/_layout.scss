@@ -1,0 +1,171 @@
+body {
+  font-family: var(--font-Inter);
+  overflow-x: hidden;
+  position: relative;
+  background: var(--color-bg);
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    background: var(--color-top-bg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    z-index: -1;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  * {
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+}
+
+// total followers
+.total {
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.6rem 0;
+    @media (min-width: $md-min) {
+      flex-direction: row;
+    }
+    .title {
+      width: 100%;
+      padding-bottom: 2.4rem;
+      margin-bottom: 1.6rem;
+      border-bottom: 1px solid var(--color-blue-Text);
+      @media (min-width: $md-min) {
+        font-size: 2.8rem;
+        border-bottom: 0;
+        width: auto;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-right: auto;
+      }
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 0.4rem;
+        color: var(--color-Text);
+        @media (min-width: $md-min) {
+          font-size: 2.8rem;
+        }
+      }
+      h3 {
+        font-size: 1.4rem;
+        color: var(--color-blue-Text);
+      }
+    }
+  }
+  .bottom {
+    margin-top: 1rem;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      height: 22.2rem;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 4px;
+        width: 100%;
+      }
+      &--facebook {
+        &::before {
+          background: var(--color-facebook);
+        }
+      }
+      &--twitter {
+        &::before {
+          background: var(--color-twitter);
+        }
+      }
+      &--instagram {
+        &::before {
+          background: var(--color-instagram);
+        }
+      }
+      &--youtube {
+        &::before {
+          background: var(--color-youTube);
+        }
+      }
+      &__url {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--color-blue-Text);
+        font-size: 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+      &__followers {
+        margin-bottom: 2.4rem;
+        text-align: center;
+        p {
+          color: var(--color-Text);
+          &:first-of-type {
+            font-size: 5.6rem;
+            font-weight: 700;
+          }
+          &:last-of-type {
+            color: var(--color-blue-Text);
+            letter-spacing: 0.5rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+.today {
+  padding: 4.8rem 0;
+  &__head {
+    color: var(--color-blue-Text);
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  &__cards {
+    row-gap: 2.6rem;
+    &__card {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--color-blue-Text);
+        flex: calc(100% - 2rem);
+      }
+      p {
+        margin-top: 3rem;
+        &.num {
+          margin-right: auto;
+          font-size: 3.2rem;
+          color: var(--color-Text);
+          font-weight: 700;
+          line-height: 26px;
+        }
+        &.growth {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-lime-green);
+  padding-bottom: 2rem;
+}
+.attribution a {
+  color: var(--color-Text);
+}

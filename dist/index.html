@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>
+      Frontend Mentor | Social Media Dashboard With Theme Switcher Master
+    </title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./js/main.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="total">
+        <div class="top">
+          <div class="title">
+            <h1>Social Media Dashboard</h1>
+            <h3>Total Followers: 23,004</h3>
+          </div>
+          <div class="toggle-theme">
+            <label for="toggle-theme__btn" class="toggle-theme__label">
+              Dark Mode
+            </label>
+            <button
+              class="toggle-theme__btn"
+              id="toggle-theme__btn"
+              aria-label="dark mode switch"
+              aria-pressed="true"
+            >
+              <span class="toggle-theme__btn__inner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div class="bottom">
+          <article class="card card--facebook">
+            <div class="card__url">
+              <img src="./images/icon-facebook.svg" alt="facebook card" />
+              <h4>@nathanf</h4>
+            </div>
+            <div class="card__followers">
+              <p>1987</p>
+              <p>Followers</p>
+            </div>
+            <p class="card__growth card__growth--up">12 Today</p>
+          </article>
+          <article class="card card--twitter">
+            <div class="card__url">
+              <img src="./images/icon-twitter.svg" alt="twitter card" />
+              <h4>@nathanf</h4>
+            </div>
+            <div class="card__followers">
+              <p>1044</p>
+              <p>Followers</p>
+            </div>
+            <p class="card__growth card__growth--up">99 Today</p>
+          </article>
+          <article class="card card--instagram">
+            <div class="card__url">
+              <img src="./images/icon-instagram.svg" alt="instagram card" />
+              <h4>@realnathanf</h4>
+            </div>
+            <div class="card__followers">
+              <p>11k</p>
+              <p>Followers</p>
+            </div>
+            <p class="card__growth card__growth--up">1099 Today</p>
+          </article>
+          <article class="card card--youtube">
+            <div class="card__url">
+              <img src="./images/icon-youtube.svg" alt="youtube card" />
+              <h4>Nathan F.</h4>
+            </div>
+            <div class="card__followers">
+              <p>8239</p>
+              <p>Subscribers</p>
+            </div>
+            <p class="card__growth card__growth--down">144 Today</p>
+          </article>
+        </div>
+      </section>
+      <section class="today">
+        <h2 class="today__head">Overview - Today</h2>
+        <div class="today__cards">
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Page Views</h4>
+            <img src="./images/icon-facebook.svg" alt="facebook" />
+            <p class="num">87</p>
+            <p class="growth card__growth card__growth--up">3%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Likes</h4>
+            <img src="./images/icon-facebook.svg" alt="facebook" />
+            <p class="num">52</p>
+            <p class="growth card__growth card__growth--down">2%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Likes</h4>
+            <img src="./images/icon-instagram.svg" alt="instagram" />
+            <p class="num">5462</p>
+            <p class="growth card__growth card__growth--up">2257%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Profile Views</h4>
+            <img src="./images/icon-instagram.svg" alt="instagram" />
+            <p class="num">52k</p>
+            <p class="growth card__growth card__growth--up">1375%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Retweets</h4>
+            <img src="./images/icon-twitter.svg" alt="twitter" />
+            <p class="num">117</p>
+            <p class="growth card__growth card__growth--up">303%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Likes</h4>
+            <img src="./images/icon-twitter.svg" alt="twitter" />
+            <p class="num">507</p>
+            <p class="growth card__growth card__growth--up">553%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Likes</h4>
+            <img src="./images/icon-youtube.svg" alt="youtube" />
+            <p class="num">107</p>
+            <p class="growth card__growth card__growth--down">19%</p>
+          </article>
+          <article class="card today__cards__card">
+            <h4 class="today__cards__title">Total Views</h4>
+            <img src="./images/icon-youtube.svg" alt="youtube" />
+            <p class="num">1407</p>
+            <p class="growth card__growth card__growth--down">12%</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">m.Gohar</a>.
+    </div>
+  </body>
+</html>

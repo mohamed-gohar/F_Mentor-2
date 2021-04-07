@@ -1,0 +1,57 @@
+:root {
+  //Primary
+  --color-lime-green: hsl(163, 72%, 41%);
+  --color-bright-red: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-instagram: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  --color-youTube: hsl(348, 97%, 39%);
+
+  // Typography
+  --font-Inter: "Inter", sans-serif;
+
+  font-size: 10px;
+  box-sizing: border-box;
+}
+:root[color-mode="light"] {
+  --color-bg: hsl(0, 0%, 100%);
+  --color-top-bg: hsl(225, 100%, 98%);
+  --color-Card-bg: hsl(227, 47%, 96%);
+  --color-blue-Text: hsl(228, 12%, 44%);
+  --color-Text: hsl(230, 17%, 14%);
+  --color-toggle: hsl(230, 22%, 74%);
+  --color-hover: #e1e3f0;
+}
+:root[color-mode="dark"] {
+  --color-bg: hsl(230, 17%, 14%);
+  --color-top-bg: hsl(232, 19%, 15%);
+  --color-Card-bg: hsl(228, 28%, 20%);
+  --color-blue-Text: hsl(228, 34%, 66%);
+  --color-Text: hsl(0, 0%, 100%);
+  --color-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --color-hover: #333a56;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 3rem;
+}
