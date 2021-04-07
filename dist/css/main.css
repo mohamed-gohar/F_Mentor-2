@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-:root[color-mode=light] {
+:root[data-theme=light] {
   --color-bg: hsl(0, 0%, 100%);
   --color-top-bg: hsl(225, 100%, 98%);
   --color-Card-bg: hsl(227, 47%, 96%);
@@ -24,7 +24,7 @@
   --color-hover: #e1e3f0;
 }
 
-:root[color-mode=dark] {
+:root[data-theme=dark] {
   --color-bg: hsl(230, 17%, 14%);
   --color-top-bg: hsl(232, 19%, 15%);
   --color-Card-bg: hsl(228, 28%, 20%);

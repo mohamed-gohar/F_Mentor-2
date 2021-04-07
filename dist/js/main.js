@@ -1,7 +1,7 @@
 let modeButton = document.querySelector(".toggle-theme__btn");
 
 function htmlSetAtrr(theme) {
-  document.documentElement.setAttribute("color-mode", theme);
+  document.documentElement.setAttribute("data-theme", theme);
 }
 
 // theme from local or the user preference on his device
