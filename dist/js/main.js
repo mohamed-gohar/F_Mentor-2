@@ -15,32 +15,36 @@ if (
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (e) => {
-    if (!localStorage.getItem("theme")) {
-      if (e.matches) {
-        htmlSetAtrr("dark");
-      } else {
-        htmlSetAtrr("light");
-      }
+    if (e.matches) {
+      htmlSetAtrr("dark");
+    } else {
+      htmlSetAtrr("light");
     }
   });
 
-//after html loaded
+// =====================
+// + after html loaded +
+// =====================
 window.addEventListener("DOMContentLoaded", () => {
   let modeButton = document.querySelector(".toggle-theme__btn");
 
-  if (localStorage.getItem("theme") === "dark") {
+  if (
+    localStorage.getItem("theme") === "dark" ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+      !localStorage.getItem("theme"))
+  ) {
     modeButton.classList.add("active");
   }
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        if (e.matches) {
-          modeButton.classList.add("active");
-        } else {
-          modeButton.classList.remove("active");
-        }
+      if (e.matches) {
+        modeButton.classList.add("active");
+        localStorage.setItem("theme", "dark");
+      } else {
+        modeButton.classList.remove("active");
+        localStorage.setItem("theme", "light");
       }
     });
 
